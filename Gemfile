@@ -28,6 +28,12 @@ gem 'devise'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'pg'
+gem 'acts-as-taggable-on'
+
+# active admin
+gem 'activeadmin'
+gem 'meta_search'
+
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil
