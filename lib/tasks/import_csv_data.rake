@@ -5,7 +5,7 @@ namespace :csvimport do
 
     require 'csv'
 
-    csv_file_path = 'https://github.com/benrmatthews/change/blob/master/change.csv'
+    csv_file_path = ENV['change'] 
 
     CSV.foreach(csv_file_path) do |row|
 
