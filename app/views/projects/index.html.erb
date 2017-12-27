@@ -5,29 +5,23 @@
 <table class="table table-striped table-hover table-responsive">
   <thead class="thead-default">
     <tr>
-      <th>Name</th>
+      <th colspan="2">Name</th>
+      <th colspan="2">Info</th>
       <th>Website</th>
-      <th>Info</th>
       <th>Area</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= project.name %></td>
-        <td><%= project.Website %></td>
-        <td><%= project.info %></td>
+        <td colspan="2"><%= link_to project.name, project %></td>
+        <td colspan="2"><%= project.info %></td>
+        <td><%= link_to 'Website', project.Website %></td>
         <td><%= project.area %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Project', new_project_path %>
